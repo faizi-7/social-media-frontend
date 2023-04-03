@@ -1,0 +1,79 @@
+@import "../../style.scss";
+
+.post {
+    @include themify($themes) {
+    -webkit-box-shadow: -7px 7px 23px -12px rgba(0,0,0,0.41);
+    -moz-box-shadow: -7px 7px 23px -12px rgba(0,0,0,0.41);
+    box-shadow: -7px 7px 23px -12px rgba(0,0,0,0.41);
+    border-radius: 20px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    .container {
+        padding: 20px;
+        .user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .profileInfo {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                img {
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    
+                }
+                .otherInfo {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    color: themed('textColor');
+                    span {
+                        font-weight: 500;
+                    }
+                    .date {
+                        color: themed('textColorsoft');
+                    }
+                }
+            }
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            margin: 20px 0;
+            p{
+                text-align: start;
+            }
+            img {
+                width: 100%;
+                max-height: 500px;
+                object-fit: cover;
+                border-radius: 16px;
+            }
+        }
+
+        .info {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: rgb(71, 157, 255);
+                font-size: 15px;
+                cursor: pointer;
+                span {
+                    color: themed(textColorsoft);
+                }
+            }
+        }
+    }
+    }
+}

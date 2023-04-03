@@ -1,0 +1,29 @@
+/* Reset margin and padding on all elements */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a default font size and line height */
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Set a default background color and text color */
+  body {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Override the default border and box-shadow styles */
+  .box {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Override the default list styles */
+  ul {
+    list-style: none;
+  }
+  

@@ -1,0 +1,103 @@
+@import "../../style.scss";
+
+.leftBar {
+    @include themify($themes) {
+    flex: 2;
+    position: sticky;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    background-color: themed("bg");
+
+
+    .container {
+        padding: 20px;
+        hr {
+            margin: 20px 0;
+            border: none;
+            height: 0.5px;
+            background-color: themed("border");
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: themed("textColor");
+            .titleName {
+                color: themed("textColorsoft");
+            }
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    padding: 2px;
+
+                }
+                span {
+
+                }
+            }
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .iconbox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #cbeaff;
+                    border-radius: 10px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+            .itemShortcuts {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .iconbox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #FAEAB1;
+                    border-radius: 10px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+            .itemOthers {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .iconbox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #FFC6D3;
+                    border-radius: 10px;
+                }
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+}
